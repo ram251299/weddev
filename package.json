@@ -1,0 +1,19 @@
+{
+  "name": "budget-tracker",
+  "version": "1.0.0",
+  "description": "A comprehensive budget tracker with modern features",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "client": "cd frontend && npm start",
+    "install-all": "cd backend && pip install -r requirements.txt && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": ["budget", "tracker", "finance", "expenses"],
+  "author": "Budget Tracker",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
