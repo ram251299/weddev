@@ -1,0 +1,12 @@
+[build]
+  base = "frontend/"
+  publish = "frontend/build"
+  command = "npm run build"
+
+[build.environment]
+  REACT_APP_API_URL = "https://budget-tracker-backend-production.up.railway.app"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
